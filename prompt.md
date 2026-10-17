@@ -1,6 +1,6 @@
 # 约束
 
-只允许修改该文件`./substructure_counting/count.py`，
+只允许修改该文件`./substructure_counting/codex_impl.py`，
 其他文件不允许修改，除了`/tmp`。
 
 # 需求
@@ -8,7 +8,7 @@
 请实现代码，
 用于统计图中每个节点属于的子结构数量（图一定是简单无向图、无自环），
 返回dict[str, Tensor]，每个Tensor的shape为`[num_nodes]`，dtype为torch.int64。
-需要高效实现，用numba。
+需要尽可能高效实现，用numba。
 可按照induced/非induced区分，induced就是形成子结构的节点之间不允许存在额外边。
 
 # 子结构定义
