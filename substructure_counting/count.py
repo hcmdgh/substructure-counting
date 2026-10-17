@@ -7,6 +7,7 @@ def count_substructure(
     edge_index: Tensor,
     num_nodes: int,
     substructure_set: set[str],
+    induced: bool,
 ) -> dict[str, Tensor]:
     assert edge_index.ndim == 2 and edge_index.shape[0] == 2
 

@@ -1,13 +1,14 @@
 # 约束
 
-只允许生成该文件`./processed_data/graph_batch_with_label.pkl`，
+只允许修改该文件`./substructure_counting/count.py`，
 其他文件不允许修改，除了`/tmp`。
 
 # 需求
 
-对于文件`./processed_data/graph_batch.pkl`，
-统计每个节点属于某个子结构的数量，增加`y`（Tensor）和`y_name`（`list[str]`）两个字段，
-子结构是non-induced的（允许额外边），
+请实现代码，
+用于统计图中每个节点属于的子结构数量（图一定是简单无向图、无自环），
+返回dict[str, Tensor]，每个Tensor的shape为`[num_nodes]`，dtype为torch.int64。
+需要高效实现，用numba。
 
 # 子结构定义
 
